@@ -1,13 +1,18 @@
-import { stringify } from "querystring"
-
-export default function ReviewDetail({params}:) {
+import { notFound } from "next/navigation";
+export default function ReviewDetail({
+    params,
+}: {
     params: {
-        productId: string
-        reviewId: string
-
-
+        productId: string;
+        reviewId: string;
+    };
+}) {
+    if(parseInt(params.reviewId) > 1000) {
+        notFound();
     }
-    return <h1>
-        Review {} for product {}
-    </h1>
-}
+    return (
+    <h1>
+        Review details are here {params.reviewId} for product {params.productId}
+        </h1>
+        );
+      } 
