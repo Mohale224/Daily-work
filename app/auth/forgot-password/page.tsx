@@ -2,7 +2,8 @@ export default function ForgotPassword() {
 
     return (
     <>
-    <h1>List of Items</h1>;
+    <h1>Forgot-password</h1>;
+    
 
 {/* <details className="dropdown"> */}
   {/* <summary className="btn m-1">Click</summary> */}
