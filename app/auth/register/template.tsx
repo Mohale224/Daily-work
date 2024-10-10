@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "@/app/auth/styles.module.css";
+import styles from "../styles.module.css"
 import { useState } from "react";
 
 const navLinks = [
@@ -21,7 +21,7 @@ export default function AuthLayout({
   return (
     <div className={styles.container} >
         <div>
-            <input value={input} onChange{(e) => setInput(e.target.value)} />
+            <input value={input} onChange={(e) => setInput(e.target.value)} />
         </div>
       {navLinks.map((link) => {
         const isActive = pathname.startsWith(link.href);
@@ -29,9 +29,9 @@ export default function AuthLayout({
           <Link
             href={link.href}
             key={link.name}
-            className={isActive ? "font-bold mr-4" : "text-blue-500 mr-4"}
+            className={`${styles.navLink} ${isActive ? styles.active : ""}`}
           >
-            {link.name}
+            {link.name }
           </Link>
         );
       })}
