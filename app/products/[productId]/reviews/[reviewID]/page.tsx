@@ -15,7 +15,7 @@ export default function ReviewDetail({
 }) {
     const random = getRandomInt(2);
     if (random === 0) {
-        throw new Error("Error loading review");
+        throw new Error("Error loading product");
     }
     if(parseInt(params.reviewId) > 1000) {
         notFound();
