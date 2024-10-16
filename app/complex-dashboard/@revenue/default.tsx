@@ -1,5 +1,5 @@
 import Card from "@/app/components/card";
 
-export default function RevenueMetrics(){
+export default function DefaultRevenueMetrics(){
     return <Card>Revenue Matrics</Card>;
 }
